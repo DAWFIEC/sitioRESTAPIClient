@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sitioRESTAPIClient';
+
+  clientes = [];
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+    // Realice la petición al URL http://localhost:3001/clientes
+    // Guarde el resultado en el atributo clientes
+    
+  }
 }
