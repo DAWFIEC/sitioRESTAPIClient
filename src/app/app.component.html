@@ -20,11 +20,11 @@
               </thead>
               <tbody>
                 <!-- Recorra el atributo clientes --> 
-                <tr class="alert" role="alert" >
-                  <th scope="row"><!-- muestre el id --></th>
-                  <td><!-- muestre el nombre --></td>
-                  <td><!-- muestre el apellido --></td>
-                  <td><!-- muestre la fecha de nacimiento --></td>
+                <tr class="alert" role="alert" *ngFor="let cliente of clientes">
+                  <th scope="row">{{cliente.id}}</th>
+                  <td>{{cliente.nombre}}</td>
+                  <td>{{cliente.apellido}}</td>
+                  <td>{{cliente.fechaNacimiento}}</td>
                   <td>
                     <a href="#" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true"><i class="fa fa-close"></i></span>

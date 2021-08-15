@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  clientes = [];
+  clientes:Array<any> = [];
 
   constructor() {
 
@@ -17,6 +17,11 @@ export class AppComponent {
 
     // Realice la petición al URL http://localhost:3001/clientes
     // Guarde el resultado en el atributo clientes
-    
+    fetch("http://localhost:3001/clientes")
+    .then(response => response.json())
+    .then(clientes => {
+      this.clientes = clientes 
+    })
+
   }
 }
